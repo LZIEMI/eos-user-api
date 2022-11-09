@@ -1,4 +1,4 @@
-PUT {url}/v1/user/register
+PUT {{url}}/v1/user/register
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
  "mobile": 9886937373
 }
 
-PUT {url}/v1/user/login
+PUT {{url}}/v1/user/login
 Content-Type: application/json
 
 {
