@@ -1,13 +1,5 @@
 server:
   port: 8085
-management:
-    endpoints:
-         web:
-            exposure:
-                 include: "*"
-    endpoint:
-         health:
-              show-details: always
 spring:
   boot:
        admin:
@@ -31,5 +23,13 @@ eureka:
     preferIpAddress: false
 
 management:
+  endpoints:
+         web:
+            exposure:
+                 include: "*"
+  endpoint:
+         health:
+            show-details: always
   security:
     enabled: false
+ 
