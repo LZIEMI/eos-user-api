@@ -1,0 +1,23 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      uri: http://app.edshopper.com:8888
+  config:
+    import: optional:configserver:http://app.edshopper.com:8888
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    enabled: true
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
+    hostname: app.edshopper.com
+    preferIpAddress: false
+
+management:
+  security:
+    enabled: false
