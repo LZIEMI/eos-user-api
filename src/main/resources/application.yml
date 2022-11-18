@@ -1,6 +1,18 @@
 server:
   port: 8085
+management:
+    endpoints:
+         web:
+            exposure:
+                 include: "*"
+    endpoint:
+         health:
+              show-details: always
 spring:
+  boot:
+       admin:
+            client:
+                url: http://app.edshopper.com:8090
   application:
     name: user-service
   cloud:
@@ -15,7 +27,7 @@ eureka:
     enabled: true
   instance:
     instanceId: ${spring.application.name}:${server.port}
-    hostname: app.edshopper.com
+    hostname: user.edshopper.com
     preferIpAddress: false
 
 management:
